@@ -47,13 +47,13 @@ bool isRoomDark() {
 bool isButtonActivated() {
   bool state = digitalRead(buttonPin);
   
-  Serial.print("Button: ");
-
+  Serial.print("Button: ON ");
+  Serial.println("Button:  ");
   // TODO: Fix this logic and print the correct status
   if (state == HIGH) {
     // Button not pressed
     return false;
-  } else {
+  } if (state == LOW) {
     // Button pressed
     return true;
   }
