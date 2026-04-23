@@ -39,10 +39,12 @@ bool isRoomDark() {
   Serial.println(lightLevel);
 
   // TODO: Fix this logic so it returns true when it's dark
-  if (lightLevel < 500) {
+  if (lightLevel > 500) {
+    Serial.println("Darkness is coming");
     return true;
   }
-  else if (lightLevel >= 500) {
+  else if (lightLevel <= 500) {
+    Serial.println("Let Light in"); 
     return false;
   }// <-- incorrect for now
 }
