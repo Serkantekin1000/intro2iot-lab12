@@ -53,7 +53,8 @@ bool isButtonActivated() {
   if (state == HIGH) {
     // Button not pressed
     return false;
-  } else {
+  } 
+  else if (state == LOW) {
     // Button pressed
     return true;
   }
